@@ -48,7 +48,7 @@ class Threshold {
                         // Evaluate shares - starting from 1 because 0 is master key
                         for (let i = 1; i <= sharesNumber; i += 1) {
                             const id = new BLS_1.default.Id();
-                            id.setInt(i);
+                            id.setInt(i + 8);
                             const shareSecretKey = new BLS_1.default.SecretKey();
                             shareSecretKey.share(msk, id);
                             const sharePublicKey = new BLS_1.default.PublicKey();
